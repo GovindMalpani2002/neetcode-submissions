@@ -1,0 +1,12 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        for c in s:
+            if c in "({[":
+                stack.append(c)
+            else:
+                if not stack:
+                    return false
+                stack.pop()
+                
+        return True
